@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.python {width: 60%; background-color: #808080;}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+  left: 31px;
+  }
+
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+  left: 15px;
+  }
+
+  .right {
+  left: 0%;
+  }
+}
+</style>
+
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+    <h1>Королев Валерий Юрьевич. Full-stack разработчик</h1>
+    <img src="IMG20251119144858.jpg" alt="my amazing face" width="100">
+
+<button type="button" class="collapsible">Обо мне:</button>
+<div class="content">
+  <p>53 года. Родился в г. Воркута. Проживаю в г. Сыктывкар Республики Коми. Образование высшее:      Санкт-Петербургская лесотехническая академия. Женат.</p>
+</div>
+<button type="button" class="collapsible">Контакты:</button>
+<div class="content">
+  <p>Мобильный телефон
+    +79048698210
+  "Электронная почта"
+    <a href="mailto:v.k1972@mail.ru">
+    v.k1972@mail.ru</a></p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<h2>Навыки</h2>
+
+<p>HTML</p>
+<div class="container">
+  <div class="skills html">50%</div>
+</div>
+
+<p>CSS</p>
+<div class="container">
+  <div class="skills css">50%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js">50%</div>
+</div>
+
+<p>Python</p>
+<div class="container">
+  <div class="skills php">50%</div>
+</div>
+
+<h2>Опыт работы: 27 лет</h2>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h3>2020</h3>
+      <p>Работаю в ГКУ РК "Дирекция по содержанию казенного имущества РК" в качестве главного эксперта. Среди обязанностей: плановые и внеплановые осмотры зданий. Сопровождение технического обслуживания зданий.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h3>2011</h3>
+      <p>Работа мастером учаска выгрузки-погрузки вагонов. Управление персоналом. Оформление отправления вагонов.Диспетчерская работа.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h3>2008</h3>
+      <p>управление участком погрузки (погрузка-выгрузка вагонов, фур и пр.), перемещение грузов и пр. На должности руководителя ком. отдела - работа с поставщиками-потребителями лесопродукции, небольшой объем продукции на экспорт в германию, работа с таможней, со ст.Сыктывкар.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h3>2006</h3>
+      <p>Управление персоналом (ведущие специалисты, специалисты 1 категории) в г.Сыктывкар, Ухта, Усинск. Работа с дорожниками Инты, Воркуты, Усогорска. Работа на постоянных и временных передвижных постах в различных районах РК.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h3>2004</h3>
+      <p>Начальник производства
+      Июнь 2004 — Декабрь 2004 (7 месяцев)
+      общее производственное управление</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h3>2002</h3>
+      <p>Заместитель директора по производству
+      Май 2002 — Июль 2003 (1 год и 3 месяца)
+      общее производственное управление</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
